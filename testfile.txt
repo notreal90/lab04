@@ -1,0 +1,55 @@
+
+
+CS2010
+Assignment #1
+
+Date Issued :Set 29 2014
+
+Date Due :Oct 13, 2014
+
+I want you to write a C++ program that will read a text file and build a dictionary of words found in that file. This dictionary must contain not only the words found in the text, but their frequency of occurrence as well. For this program, a word is defined to be a character string consisting of upper-case and/or lower-case letters. Once your program has finished reading the file and building the dictionary, it will display the contents of the dictionary. For instance, if your program is given the input "My name is my name" then its output will look as shown below :
+
+Word		Frequency
+---------------------
+my			2
+name			2
+is			1
+
+From the output you should note two things : first, case does not matter when comparing words. All uppercase letters/words are converted to their lowercase counterpart. Second, the words in the dictionary are not sorted.
+You will implement the dictionary as a two-dimensional array of chars with a fixed number of rows and columns. This choice will impact the maximum word size allowed as well as the number of words in your dictionary, so your program must be prepared to deal with this and notify the user.
+To help you get started, I offer you this little C++ program ( that uses some C I/O functions) that will output the words found in a file. It does not create a dictionary nor count the number of occurrences of a word.
+
+#include <cstdio>
+#include <cctype>
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+char ch;
+int newLine= 0;
+
+while( cin.good() )
+{
+ ch = cin.get();
+ if ( isalpha(ch) )  /* function test is ch  is A-Z, a-z */
+    {
+       cout.put(ch);
+       newLine = 1;
+    }
+ else
+       if (newLine)
+          {
+              cout.put('\n');
+              newLine = 0;
+          }
+
+ return 0;
+}
+
+You may want to look up C functions strcmp() and strncmp() and see what they do. You might find them useful.
+
+One final piece of information : if you want your program to read from a file, you can do so from the shell prompt by typing ./prog < data.dat where "prog" is the name of your program and "data.dat" is your text file.
+
+Franco

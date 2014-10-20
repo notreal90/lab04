@@ -2,8 +2,9 @@ Student ID: 4903077
 Name: Matthew McAlpine
 CS2010 Fall 2014
 Lab Assignment 4
+Git address: https://github.com/notreal90/lab04
 
-
+Sorry for the lateness again, (I should change my username from silais to alwayslate :P)
 This project reads from the cin and counts how many times a word appears.
 Any non alpha character is both ignored and treated as a new word.
 
